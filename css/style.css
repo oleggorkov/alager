@@ -207,6 +207,7 @@ body {
     height: 70px;
     background-color: #f2f2f2;
     padding-left: 31px;
+    padding-right: 62px;
     border: 0;
 }
 
@@ -398,6 +399,7 @@ body {
     width: 370px;
     height: 70px;
     padding-left: 31px;
+    padding-right: 31px;
     color: #818181;
     font-size: 13px;
     font-weight: 400;
@@ -408,6 +410,7 @@ body {
     width: 370px;
     height: 70px;
     padding-left: 31px;
+    padding-right: 62px;
     color: #818181;
     font-size: 13px;
     font-weight: 400;
@@ -827,6 +830,7 @@ body {
     background-color: #f2f2f2;
     padding-left: 31px;
     margin-right: 30px;
+    padding-right: 62px;
 }
 
 .cons-btn {
