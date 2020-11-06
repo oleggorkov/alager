@@ -1,0 +1,580 @@
+.landing-main {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 11.2rem;
+    height: 1.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__mobile-toggle {
+    width: 2rem;
+    height: 1.6rem;
+    display: flex;
+
+    border: none;
+
+    @include above($mid-desktop) {
+      display: none;
+    }
+
+    svg {
+      width: 2rem;
+      height: 1.6rem;
+      fill: #FFFFFF;
+    }
+  }
+
+  &__menu {
+    display: none;
+    justify-content: space-between;
+
+    margin-right: 5.8rem;
+
+    @include above($mid-desktop) {
+      display: flex;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 5.9rem;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        text-decoration: none;
+        white-space: nowrap;
+
+        transition: all 1s;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 4.6rem;
+          height: 0.2rem;
+          border-radius: 0.5rem;
+          background: $red-main;
+          top: 2.2rem;
+          display: none;
+        }
+
+        &:hover {
+
+          &:after {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &__debate {
+    width: 16.6rem;
+    height: 4rem;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF;
+    color: $red-main;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all .25s;
+
+    padding: 1.2rem 2rem;
+
+    &:hover {
+      color: #FFFFFF;
+      background: $red-main;
+    }
+
+    @include above($mid-desktop) {
+      display: flex;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin-top: 8.5rem;
+
+    @include above($tablet) {
+      margin-top: 4rem;
+    }
+
+    @include above($mid-desktop) {
+      width: 115.3rem;
+      margin-top: 13.1rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+
+      @include above($tablet) {
+        font-size: 1.6rem;
+      }
+
+      @include above($mid-desktop) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-title {
+      width: auto;
+      height: auto;
+
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2.4rem;
+      letter-spacing: 0.03em;
+      text-align: left;
+      color: #FFFFFF;
+
+      margin-top: 2.5rem;
+
+      @include above($tablet) {
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-top: 3.1rem;
+      }
+
+      @include above($mid-desktop) {
+        width: 115.3rem;
+        font-size: 5rem;
+        line-height: 6rem;
+      }
+    }
+
+    &-text {
+      width: auto;
+      height: auto;
+
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #FFFFFF;
+
+      margin-top: 1.6rem;
+
+      @include above($tablet) {
+        font-size: 2rem;
+        line-height: 3.6rem;
+        margin-top: 4.6rem;
+      }
+
+      @include above($mid-desktop) {
+        width: 81rem;
+      }
+    }
+
+    button {
+      width: 23rem;
+      height: 4.8rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-align: center;
+      color: #FFFFFF;
+      text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+      white-space: nowrap;
+      background: $red-helper;
+      transition: all .25s;
+      border: 0.1rem solid #000000;
+      border-radius: 0.5rem;
+
+      margin-top: 2.8rem;
+      padding: 1.2rem 2.3rem;
+
+      @include above($tablet) {
+        font-size: 2rem;
+        line-height: 2.9rem;
+        width: 35.7rem;
+        height: 7rem;
+        margin-top: 5.7rem;
+        padding: 1.6rem 3.5rem;
+      }
+
+      &:hover {
+        color: $red-helper;
+        background: #FFFFFF;
+
+        svg {
+          fill: $red-helper;
+        }
+      }
+
+      svg {
+        width: 1.6rem;
+        height: 2.2rem;
+        order: -1;
+        fill: #FFFFFF;
+
+        @include above($tablet) {
+          width: 2.8rem;
+          height: 3.9rem;
+        }
+      }
+
+    }
+  }
+
+  &__extra {
+    display: none;
+
+    position: absolute;
+    z-index: 100;
+
+    color: #FFFFFF;
+    opacity: 0.34;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0.5em;
+    text-align: left;
+    top: 42rem;
+    left: -5.9rem;
+
+    transform: rotate(-90deg);
+
+    @include above($mid-desktop) {
+      display: flex;
+    }
+
+  }
+
+  &__video {
+    display: none;
+    max-height: 100vh;
+    overflow: hidden;
+
+    @include above($desktop) {
+      display: flex;
+    }
+
+    &-content {
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+
+      video {
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.landing-tech {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 4rem;
+
+  @include above($mid-desktop) {
+    padding-top: 10rem;
+  }
+
+  &__title {
+    width: 100%;
+    height: auto;
+
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 3.2rem;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: $black-main;
+
+    @include above($desktop) {
+      font-size: 5rem;
+      line-height: 5.4rem;
+      text-align: center;
+    }
+
+  }
+
+  &__data {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4.4rem;
+
+    @include above($tablet-landscape) {
+      padding-bottom: 8rem;
+      margin-top: 6.8rem;
+    }
+
+    @include above($desktop) {
+      width: 78%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include above($mid-desktop) {
+      max-width: 115.8rem;
+    }
+
+    &-item {
+      width: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+
+      @include above($tablet-landscape) {
+        width: 27rem;
+      }
+
+      &:hover {
+        p {
+          color: $red-bold;
+        }
+        svg {
+          fill: $red-bold;
+        }
+
+        & .clothes {
+          fill: #FFFFFF;
+          stroke: $red-bold;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 3.5rem;
+
+        @include above($tablet-landscape) {
+          margin-right: 6.6rem;
+        }
+      }
+
+      svg {
+        width: 4.1rem;
+        height: 4.1rem;
+        fill: $gray-helper;
+
+        @include above($mid-desktop) {
+          width: 6rem;
+          height: 5.5rem;
+        }
+      }
+
+      & .clothes {
+        fill: #FFFFFF;
+        stroke: $gray-helper;
+      }
+
+      p {
+        min-height: 5rem;
+        max-height: 6.9rem;
+
+        display: none;
+
+        color: $gray-light;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.02em;
+        text-align: center;
+
+        margin-top: 2.1rem;
+
+        @include above($mid-desktop) {
+          display: flex;
+        }
+
+      }
+    }
+  }
+
+  &__info {
+    max-width: 142.8rem;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 4.8rem;
+
+    @include above($mid-desktop) {
+      margin-top: 1.7rem;
+    }
+
+    &-image {
+      width: 20rem;
+      height: auto;
+
+      display: none;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @include above($desktop) {
+        display: flex;
+      }
+
+      @include above($mid-desktop) {
+        width: 35.4rem;
+      }
+    }
+
+    &-arrow {
+      display: none;
+
+      cursor: pointer;
+
+      @include above($desktop) {
+        display: flex;
+      }
+
+      &:hover {
+        svg {
+          stroke: $red-bold;
+        }
+      }
+
+      svg {
+        width: 3.3rem;
+        height: 7rem;
+        fill: #FFFFFF;
+        stroke: $gray-lighter;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      max-width: 50rem;
+      height: auto;
+
+      @include above($desktop) {
+        max-width: 40rem;
+      }
+
+      span {
+        color: $gray-light;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+
+        @include above($desktop) {
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: $black-main;
+
+        margin-top: 1rem;
+
+        @include above($desktop) {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+        }
+      }
+
+      p {
+        color: #000000;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+
+        margin-top: 1.5rem;
+
+        @include above($desktop) {
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}

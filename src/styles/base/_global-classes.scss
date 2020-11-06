@@ -1,0 +1,64 @@
+.navigate {
+  position: absolute;
+  z-index: 100;
+  top: 23rem;
+  right: 3rem;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-right: 0.2rem solid $gray-main;
+  border-radius: 0.5rem;
+
+  @include above($mid-desktop) {
+    display: flex;
+  }
+
+  @include above($big-desktop) {
+    right: 5.2rem;
+  }
+
+  li {
+
+    a {
+      width: auto;
+      height: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      font-weight: 100;
+      letter-spacing: 0.02em;
+      text-align: center;
+      text-decoration: none;
+      color: $gray-main;
+
+      padding: 1.7rem;
+
+      transition: all 0.5s;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+
+      & + .landing-main__navigate-active {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+#navigate-white {
+   color: #FFFFFF;
+  font-weight: 900;
+ }
+
+#navigate-red {
+  color: $red-bold;
+  font-weight: 900;
+}

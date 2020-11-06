@@ -1,0 +1,19 @@
+include ../helper-mixins/svg-mix
+
+block mobile-menu
+    div.mobile-menu
+        button(type='button').mobile-menu__close.mobile-toggles
+            +svg-mix('cross')
+        ul.mobile-menu__list.mobile-menu__list--main
+            li
+                a(href="#") Технологии
+            li
+                a(href="#") Наши принципы
+            li
+                a(href="#") Интеграция
+            li
+                a(href="#") Управление и интересы
+            li
+                a(href="#") События
+            li
+                a(href='#').landing-main__debate Обсудить проект

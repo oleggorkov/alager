@@ -1,0 +1,98 @@
+include ../helper-mixins/svg-mix
+
+mixin landing-main
+    section.section
+        .landing-main__extra Технологии и опыт
+        ul.navigate
+            li
+                a(href='#' id="navigate-white") 01
+            li
+                a(href='#') 02
+            li
+                a(href='#') 03
+            li
+                a(href='#') 04
+            li
+                a(href='#') 05
+            li
+                a(href='#') 06
+            li
+                a(href='#') 07
+        .landing-main__video
+            .landing-main__video-content
+                video(loop muted autoplay poster="../../img/alager-logo.png")
+                    source(src="../../img/video.mp4" type="video/mp4")
+        .section__wrapper
+            .landing-main
+                header.landing-main__header
+                    .landing-main__block
+                        a(href='#').landing-main__logo
+                            img(src='../../img/alager-logo.png')
+                    .landing-main__block
+                        ul.landing-main__menu
+                            li
+                                a(href='#') Технологии
+                            li
+                                a(href='#') Наши принципы
+                            li
+                                a(href='#') Интеграция
+                            li
+                                a(href='#') Управление и интересы
+                            li
+                                a(href='#') События
+                        a(href='#').landing-main__debate Обсудить проект
+                        button(type='button').mobile-toggle.landing-main__mobile-toggle.mobile-toggles
+                            +svg-mix('burger')
+                .landing-main__info
+                    span 1995 - 2019
+                    h1.landing-main__info-title Признанные специалисты, оказавшие существенное влияние на формирование отечественной IT-индустрии.
+                    div.landing-main__info-text С 1995 года разрабатываем проекты городского масштаба: Data центры, дисрибуцию, розничные сети, ЦОД.
+                    button(type='button') Презентация компании
+                        +svg-mix('pdf')
+    section.section
+        ul.navigate
+            li
+                a(href='#') 01
+            li
+                a(href='#' id="navigate-red") 02
+            li
+                a(href='#') 03
+            li
+                a(href='#') 04
+            li
+                a(href='#') 05
+            li
+                a(href='#') 06
+            li
+                a(href='#') 07
+        .section__wrapper
+            .landing-tech
+                h2.landing-tech__title Передовые технологии
+            .landing-tech__data
+                .landing-tech__content
+                    .landing-tech__content-item
+                        +svg-mix('clothes', 'clothes')
+                        p IoT / M2M Интернет вещей и межмашинное взаимодействие
+                    .landing-tech__content-item
+                        +svg-mix('brain')
+                        p ML/AI Искуственный интеллект и машинное обучение
+                    .landing-tech__content-item
+                        +svg-mix('cloud')
+                        p Cloud computing, VDI Виртуализация вычислительных ресурсов, систем хранения данных и рабочих мест
+                    .landing-tech__content-item
+                        +svg-mix('data')
+                        p Edge computing<br> Организация вычислений/обработки данных на “границе сети”
+                .landing-tech__info
+                    .landing-tech__info-arrow
+                        +svg-mix('arrow-left')
+                    .landing-tech__info-image
+                        img(src='../../img/ai-2.png' alt='logo')
+                    .landing-tech__info-content
+                        span ML/Ai
+                        h3 Искусственный интелект и машинное обучение
+                        p Применение алгоритмов и фреймворков машинного обучения для обработки данных на edge. Прежде всего, видеоданных (изображений).
+                    .landing-tech__info-arrow
+                        +svg-mix('arrow-right')
+
+
+
