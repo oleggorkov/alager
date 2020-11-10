@@ -120,6 +120,7 @@
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: 0.03em;
+    white-space: nowrap;
     text-decoration: none;
     border-radius: 0.5rem;
     transition: all .25s;
@@ -239,7 +240,7 @@
       white-space: nowrap;
       background: $red-helper;
       transition: all .25s;
-      border: 0.1rem solid #000000;
+      border: none;
       border-radius: 0.5rem;
 
       margin-top: 2.8rem;
